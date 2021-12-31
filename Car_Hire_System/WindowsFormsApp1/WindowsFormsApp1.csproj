@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BDCE0F57-267F-4FD9-A2CD-E84F36279125}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML, Version=0.95.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.95.4\lib\net46\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.10.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.0.10\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.0.1\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.0.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Formlar\Admin_AS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Admin_AS.Designer.cs">
+      <DependentUpon>Admin_AS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Admin_Guncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Admin_Guncelle.Designer.cs">
+      <DependentUpon>Admin_Guncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Admin_Ekle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Admin_Ekle.Designer.cs">
+      <DependentUpon>Admin_Ekle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Araclar_AS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Araclar_AS.Designer.cs">
+      <DependentUpon>Araclar_AS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Arac_Guncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Arac_Guncelle.Designer.cs">
+      <DependentUpon>Arac_Guncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Arac_Kayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Arac_Kayit.Designer.cs">
+      <DependentUpon>Arac_Kayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Aracı_Görüntüle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Aracı_Görüntüle.Designer.cs">
+      <DependentUpon>Aracı_Görüntüle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Admin_sec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Admin_sec.Designer.cs">
+      <DependentUpon>Admin_sec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Araç_Seçin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Araç_Seçin.Designer.cs">
+      <DependentUpon>Araç_Seçin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Kiralama_Guncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Kiralama_Guncelle.Designer.cs">
+      <DependentUpon>Kiralama_Guncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Satıcı_Guncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Satıcı_Guncelle.Designer.cs">
+      <DependentUpon>Satıcı_Guncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Musteri_Guncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Musteri_Guncelle.Designer.cs">
+      <DependentUpon>Musteri_Guncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\musteri_satıcı_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\musteri_satıcı_login.Designer.cs">
+      <DependentUpon>musteri_satıcı_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Müşteri_AS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Müşteri_AS.Designer.cs">
+      <DependentUpon>Müşteri_AS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Musteri_Kayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Musteri_Kayit.Designer.cs">
+      <DependentUpon>Musteri_Kayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\musteri_satıcı.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\musteri_satıcı.Designer.cs">
+      <DependentUpon>musteri_satıcı.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Satici_Kayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Satici_Kayit.Designer.cs">
+      <DependentUpon>Satici_Kayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Satıcı_AS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Satıcı_AS.Designer.cs">
+      <DependentUpon>Satıcı_AS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Ödeme _Guncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Ödeme _Guncelle.Designer.cs">
+      <DependentUpon>Ödeme _Guncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Ödeme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Ödeme.Designer.cs">
+      <DependentUpon>Ödeme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Anasayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Anasayfa.Designer.cs">
+      <DependentUpon>Anasayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Kiralama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Kiralama.Designer.cs">
+      <DependentUpon>Kiralama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Objeler\Admin.cs" />
+    <Compile Include="Objeler\Adres.cs" />
+    <Compile Include="Objeler\Araç.cs" />
+    <Compile Include="Objeler\Araç_Kategorisi.cs" />
+    <Compile Include="Objeler\DBController.cs" />
+    <Compile Include="Objeler\DGVPrinter.cs" />
+    <Compile Include="Objeler\FormYardımcisi.cs" />
+    <Compile Include="Objeler\Insan.cs" />
+    <Compile Include="Objeler\Müşteri.cs" />
+    <Compile Include="Objeler\Satıcı.cs" />
+    <Compile Include="Objeler\Kiralama.cs" />
+    <Compile Include="Objeler\Ödeme.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formlar\Admin_AS.resx">
+      <DependentUpon>Admin_AS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Admin_Guncelle.resx">
+      <DependentUpon>Admin_Guncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Admin_Ekle.resx">
+      <DependentUpon>Admin_Ekle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Araclar_AS.resx">
+      <DependentUpon>Araclar_AS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Arac_Guncelle.resx">
+      <DependentUpon>Arac_Guncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Arac_Kayit.resx">
+      <DependentUpon>Arac_Kayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Aracı_Görüntüle.resx">
+      <DependentUpon>Aracı_Görüntüle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Admin_sec.resx">
+      <DependentUpon>Admin_sec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Araç_Seçin.resx">
+      <DependentUpon>Araç_Seçin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Kiralama_Guncelle.resx">
+      <DependentUpon>Kiralama_Guncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Satıcı_Guncelle.resx">
+      <DependentUpon>Satıcı_Guncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Musteri_Guncelle.resx">
+      <DependentUpon>Musteri_Guncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\musteri_satıcı_login.resx">
+      <DependentUpon>musteri_satıcı_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Müşteri_AS.resx">
+      <DependentUpon>Müşteri_AS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Musteri_Kayit.resx">
+      <DependentUpon>Musteri_Kayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\musteri_satıcı.resx">
+      <DependentUpon>musteri_satıcı.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Satici_Kayit.resx">
+      <DependentUpon>Satici_Kayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Satıcı_AS.resx">
+      <DependentUpon>Satıcı_AS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Ödeme _Guncelle.resx">
+      <DependentUpon>Ödeme _Guncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Ödeme.resx">
+      <DependentUpon>Ödeme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Kiralama.resx">
+      <DependentUpon>Kiralama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Anasayfa.resx">
+      <DependentUpon>Anasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contacts_128px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil_23px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\male_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aracKayit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chevron_left_9px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chevron_right_9px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next_page_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Araç_Kirala.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Database\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\female_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\microsoft_excel_2019_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_120px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkmark_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Car.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
